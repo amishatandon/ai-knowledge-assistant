@@ -1,0 +1,7 @@
+pypdf
+python-dotenv
+sentence-transformers
+scikit-learn
+chromadb
+google-genai
+rank-bm25
