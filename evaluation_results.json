@@ -1,0 +1,265 @@
+{
+  "top_k": 5,
+  "baseline": {
+    "mode": "WITHOUT QUERY REWRITING",
+    "number_of_questions": 6,
+    "mean_recall_at_5": 0.9333333333333333,
+    "mrr": 0.8888888888888888,
+    "mean_rewrite_seconds": 0.0001438000084211429,
+    "mean_retrieval_seconds": 1.6089346999651752,
+    "mean_total_seconds": 1.6090784999735963,
+    "question_results": [
+      {
+        "question": "Why is BERT different from earlier language models?",
+        "retrieved_ids": [
+          "BERT.pdf-page-1-chunk-0",
+          "BERT.pdf-page-3-chunk-12",
+          "BERT.pdf-page-8-chunk-36",
+          "BERT.pdf-page-3-chunk-11",
+          "BERT.pdf-page-4-chunk-15"
+        ],
+        "relevant_doc_ids": [
+          "BERT.pdf-page-1-chunk-0",
+          "BERT.pdf-page-2-chunk-5",
+          "BERT.pdf-page-3-chunk-12",
+          "BERT.pdf-page-4-chunk-15",
+          "BERT.pdf-page-1-chunk-4"
+        ],
+        "recall_at_5": 0.6,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 0.00013449997641146183,
+        "retrieval_seconds": 1.8316172000486404,
+        "total_seconds": 1.8317517000250518
+      },
+      {
+        "question": "How does self-attention help Transformers model relationships between tokens?",
+        "retrieved_ids": [
+          "BERT.pdf-page-1-chunk-3",
+          "BERT.pdf-page-3-chunk-13",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-7-chunk-22",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-2-chunk-5",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-5-chunk-14"
+        ],
+        "relevant_doc_ids": [
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-2-chunk-5",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-5-chunk-14",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-7-chunk-22"
+        ],
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 0.3333333333333333,
+        "rewrite_seconds": 0.0001351999817416072,
+        "retrieval_seconds": 1.7126472999807447,
+        "total_seconds": 1.7127824999624863
+      },
+      {
+        "question": "How does LoRA reduce the number of trainable parameters during fine-tuning?",
+        "retrieved_ids": [
+          "LoRA.pdf-page-1-chunk-1",
+          "LoRA.pdf-page-4-chunk-16",
+          "LoRA.pdf-page-23-chunk-89",
+          "LoRA.pdf-page-4-chunk-15",
+          "LoRA.pdf-page-21-chunk-83"
+        ],
+        "relevant_doc_ids": [
+          "LoRA.pdf-page-1-chunk-1",
+          "LoRA.pdf-page-4-chunk-15"
+        ],
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 0.00012560002505779266,
+        "retrieval_seconds": 1.659597999881953,
+        "total_seconds": 1.6597235999070108
+      },
+      {
+        "question": "How does Retrieval-Augmented Generation combine retrieval with text generation?",
+        "retrieved_ids": [
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-1-chunk-1",
+          "DPR.pdf-page-10-chunk-50",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-1-chunk-0",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-5-chunk-22",
+          "DPR.pdf-page-9-chunk-43"
+        ],
+        "relevant_doc_ids": [
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-1-chunk-1",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-5-chunk-22"
+        ],
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 0.00019990000873804092,
+        "retrieval_seconds": 1.6002583999652416,
+        "total_seconds": 1.6004582999739796
+      },
+      {
+        "question": "How does the ReAct framework combine reasoning and actions?",
+        "retrieved_ids": [
+          "ReAct.pdf-page-2-chunk-9",
+          "ReAct.pdf-page-3-chunk-11",
+          "ReAct.pdf-page-4-chunk-16",
+          "ReAct.pdf-page-3-chunk-13",
+          "ReAct.pdf-page-4-chunk-17"
+        ],
+        "relevant_doc_ids": [
+          "ReAct.pdf-page-2-chunk-9",
+          "ReAct.pdf-page-3-chunk-13",
+          "ReAct.pdf-page-4-chunk-17"
+        ],
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 0.0001235000090673566,
+        "retrieval_seconds": 1.394998800009489,
+        "total_seconds": 1.3951223000185564
+      },
+      {
+        "question": "How does Dense Passage Retrieval use encoders to retrieve relevant passages?",
+        "retrieved_ids": [
+          "DPR.pdf-page-2-chunk-9",
+          "DPR.pdf-page-3-chunk-11",
+          "DPR.pdf-page-9-chunk-41",
+          "DPR.pdf-page-1-chunk-0",
+          "DPR.pdf-page-12-chunk-60"
+        ],
+        "relevant_doc_ids": [
+          "DPR.pdf-page-1-chunk-0",
+          "DPR.pdf-page-2-chunk-9",
+          "DPR.pdf-page-3-chunk-11"
+        ],
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 0.00014410004951059818,
+        "retrieval_seconds": 1.4544884999049827,
+        "total_seconds": 1.4546325999544933
+      }
+    ]
+  },
+  "query_rewriting": {
+    "mode": "WITH QUERY REWRITING",
+    "number_of_questions": 6,
+    "mean_recall_at_5": 0.4888888888888889,
+    "mrr": 0.8333333333333334,
+    "mean_rewrite_seconds": 6.317814633327846,
+    "mean_retrieval_seconds": 1.9340682333374086,
+    "mean_total_seconds": 8.251882866665255,
+    "question_results": [
+      {
+        "question": "Why is BERT different from earlier language models?",
+        "retrieved_ids": [
+          "BERT.pdf-page-2-chunk-5",
+          "BERT.pdf-page-3-chunk-12",
+          "BERT.pdf-page-1-chunk-0",
+          "BERT.pdf-page-13-chunk-56",
+          "BERT.pdf-page-9-chunk-40"
+        ],
+        "relevant_doc_ids": [
+          "BERT.pdf-page-1-chunk-0",
+          "BERT.pdf-page-2-chunk-5",
+          "BERT.pdf-page-3-chunk-12",
+          "BERT.pdf-page-4-chunk-15",
+          "BERT.pdf-page-1-chunk-4"
+        ],
+        "recall_at_5": 0.6,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 8.193608900066465,
+        "retrieval_seconds": 1.6286601999308914,
+        "total_seconds": 9.822269099997357
+      },
+      {
+        "question": "How does self-attention help Transformers model relationships between tokens?",
+        "retrieved_ids": [
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-2-chunk-5",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-2-chunk-6",
+          "BERT.pdf-page-1-chunk-3",
+          "BERT.pdf-page-5-chunk-20",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-2-chunk-7"
+        ],
+        "relevant_doc_ids": [
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-2-chunk-5",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-5-chunk-14",
+          "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-7-chunk-22"
+        ],
+        "recall_at_5": 0.3333333333333333,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 5.712074300041422,
+        "retrieval_seconds": 3.603099799947813,
+        "total_seconds": 9.315174099989235
+      },
+      {
+        "question": "How does LoRA reduce the number of trainable parameters during fine-tuning?",
+        "retrieved_ids": [
+          "LoRA.pdf-page-2-chunk-4",
+          "LoRA.pdf-page-9-chunk-38",
+          "LoRA.pdf-page-1-chunk-0",
+          "LoRA.pdf-page-23-chunk-89",
+          "LoRA.pdf-page-6-chunk-26"
+        ],
+        "relevant_doc_ids": [
+          "LoRA.pdf-page-1-chunk-1",
+          "LoRA.pdf-page-4-chunk-15"
+        ],
+        "recall_at_5": 0.0,
+        "reciprocal_rank": 0.0,
+        "rewrite_seconds": 6.018992799916305,
+        "retrieval_seconds": 1.7748408000916243,
+        "total_seconds": 7.793833600007929
+      },
+      {
+        "question": "How does Retrieval-Augmented Generation combine retrieval with text generation?",
+        "retrieved_ids": [
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-1-chunk-1",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-5-chunk-22",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-3-chunk-11",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-7-chunk-31",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-3-chunk-10"
+        ],
+        "relevant_doc_ids": [
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-1-chunk-1",
+          "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-5-chunk-22"
+        ],
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 4.982355499989353,
+        "retrieval_seconds": 1.6130391000770032,
+        "total_seconds": 6.595394600066356
+      },
+      {
+        "question": "How does the ReAct framework combine reasoning and actions?",
+        "retrieved_ids": [
+          "ReAct.pdf-page-2-chunk-9",
+          "ReAct.pdf-page-9-chunk-44",
+          "ReAct.pdf-page-3-chunk-11",
+          "ReAct.pdf-page-4-chunk-16",
+          "ReAct.pdf-page-1-chunk-3"
+        ],
+        "relevant_doc_ids": [
+          "ReAct.pdf-page-2-chunk-9",
+          "ReAct.pdf-page-3-chunk-13",
+          "ReAct.pdf-page-4-chunk-17"
+        ],
+        "recall_at_5": 0.3333333333333333,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 4.839038899983279,
+        "retrieval_seconds": 1.3610095999902114,
+        "total_seconds": 6.200048499973491
+      },
+      {
+        "question": "How does Dense Passage Retrieval use encoders to retrieve relevant passages?",
+        "retrieved_ids": [
+          "DPR.pdf-page-2-chunk-9",
+          "DPR.pdf-page-9-chunk-41",
+          "DPR.pdf-page-3-chunk-11",
+          "DPR.pdf-page-12-chunk-59",
+          "DPR.pdf-page-9-chunk-42"
+        ],
+        "relevant_doc_ids": [
+          "DPR.pdf-page-1-chunk-0",
+          "DPR.pdf-page-2-chunk-9",
+          "DPR.pdf-page-3-chunk-11"
+        ],
+        "recall_at_5": 0.6666666666666666,
+        "reciprocal_rank": 1.0,
+        "rewrite_seconds": 8.160817399970256,
+        "retrieval_seconds": 1.6237598999869078,
+        "total_seconds": 9.784577299957164
+      }
+    ]
+  }
+}

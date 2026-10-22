@@ -1,3 +1,4 @@
+
 from agent.rag_agent import RAGAgent
 
 
@@ -7,34 +8,20 @@ def main():
     print("AI KNOWLEDGE ASSISTANT")
     print("=" * 70)
 
-    print(
-        "\nKnowledge base loaded."
-    )
-
-    print(
-        "Ask questions about your research papers."
-    )
-
-    print(
-        "Type 'exit' to quit."
-    )
+    print("\nKnowledge base loaded.")
+    print("Ask questions about your research papers.")
+    print("Type 'exit' to quit.")
 
     # -------------------------
     # Initialize RAG Agent
     # -------------------------
 
     try:
-
         agent = RAGAgent()
 
     except Exception as e:
-
-        print(
-            "\nERROR while initializing the agent:"
-        )
-
+        print("\nERROR while initializing the agent:")
         print(e)
-
         return
 
     # -------------------------
@@ -45,18 +32,14 @@ def main():
 
         print("\n" + "-" * 70)
 
-        query = input(
-            "\nAsk a question: "
-        ).strip()
+        query = input("\nAsk a question: ").strip()
 
         # -------------------------
         # Exit
         # -------------------------
 
         if query.lower() == "exit":
-
             print("\nGoodbye!")
-
             break
 
         # -------------------------
@@ -64,11 +47,7 @@ def main():
         # -------------------------
 
         if not query:
-
-            print(
-                "\nPlease enter a question."
-            )
-
+            print("\nPlease enter a question.")
             continue
 
         # -------------------------
@@ -76,20 +55,14 @@ def main():
         # -------------------------
 
         try:
-
             result = agent.answer(
                 query,
                 top_k=5
             )
 
         except Exception as e:
-
-            print(
-                "\nERROR while answering the question:"
-            )
-
+            print("\nERROR while answering the question:")
             print(e)
-
             continue
 
         # -------------------------
@@ -97,77 +70,70 @@ def main():
         # -------------------------
 
         print("\n" + "=" * 70)
-
         print("ANSWER")
-
         print("=" * 70)
 
-        print(
-            result["answer"]
-        )
+        print(result["answer"])
 
         # -------------------------
         # Display sources
         # -------------------------
 
         print("\n" + "=" * 70)
-
         print("SOURCES")
-
         print("=" * 70)
 
-        results = result["results"]
+        try:
+            results = result["results"]
 
-        documents = (
-            results["documents"][0]
-        )
+            documents = results["documents"][0]
+            metadatas = results["metadatas"][0]
 
-        metadatas = (
-            results["metadatas"][0]
-        )
+            rrf_scores = results["rrf_scores"][0]
+            mmr_scores = results["mmr_scores"][0]
+            reranker_scores = results["reranker_scores"][0]
 
-        rrf_scores = (
-            results["rrf_scores"][0]
-        )
+            # -------------------------
+            # Display each source
+            # -------------------------
 
-        reranker_scores = (
-            results["reranker_scores"][0]
-        )
+            for i in range(len(documents)):
 
-        # -------------------------
-        # Display each source
-        # -------------------------
+                metadata = metadatas[i]
 
-        for i in range(
-            len(documents)
-        ):
+                print(
+                    f"\n[{i + 1}] "
+                    f"{metadata.get('source', 'Unknown source')}"
+                )
 
-            metadata = metadatas[i]
+                print(
+                    f"    Page: "
+                    f"{metadata.get('page', 'N/A')}"
+                )
 
-            print(
-                f"\n[{i + 1}] "
-                f"{metadata['source']}"
-            )
+                print(
+                    f"    Chunk: "
+                    f"{metadata.get('chunk_id', 'N/A')}"
+                )
 
-            print(
-                f"    Page: "
-                f"{metadata['page']}"
-            )
+                print(
+                    f"    RRF Score: "
+                    f"{rrf_scores[i]:.6f}"
+                )
 
-            print(
-                f"    Chunk: "
-                f"{metadata['chunk_id']}"
-            )
+                print(
+                    f"    MMR Score: "
+                    f"{mmr_scores[i]:.6f}"
+                )
 
-            print(
-                f"    RRF Score: "
-                f"{rrf_scores[i]:.6f}"
-            )
+                print(
+                    f"    Reranker Score: "
+                    f"{reranker_scores[i]:.4f}"
+                )
 
-            print(
-                f"    Reranker Score: "
-                f"{reranker_scores[i]:.4f}"
-            )
+        except (KeyError, IndexError, TypeError) as e:
+            print("\nUnable to display all source scores.")
+            print(f"Details: {e}")
 
 
 # -------------------------
@@ -175,5 +141,4 @@ def main():
 # -------------------------
 
 if __name__ == "__main__":
-
     main()

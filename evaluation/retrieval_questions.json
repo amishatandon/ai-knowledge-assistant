@@ -1,0 +1,38 @@
+[
+    {
+        "question": "What is the main idea behind the Transformer architecture?",
+        "expected_sources": [
+            "NIPS-2017-attention-is-all-you-need-Paper.pdf"
+        ]
+    },
+    {
+        "question": "What is BERT and how does it use bidirectional representations?",
+        "expected_sources": [
+            "BERT.pdf"
+        ]
+    },
+    {
+        "question": "What problem does LoRA solve?",
+        "expected_sources": [
+            "LoRA.pdf"
+        ]
+    },
+    {
+        "question": "What is Retrieval-Augmented Generation?",
+        "expected_sources": [
+            "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf"
+        ]
+    },
+    {
+        "question": "What is the ReAct framework?",
+        "expected_sources": [
+            "ReAct.pdf"
+        ]
+    },
+    {
+        "question": "What is Dense Passage Retrieval?",
+        "expected_sources": [
+            "DPR.pdf"
+        ]
+    }
+]

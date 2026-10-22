@@ -1,0 +1,50 @@
+[
+    {
+    "question": "Why is BERT different from earlier language models?",
+    "relevant_doc_ids": [
+        "BERT.pdf-page-1-chunk-0",
+        "BERT.pdf-page-2-chunk-5",
+        "BERT.pdf-page-3-chunk-12",
+        "BERT.pdf-page-4-chunk-15",
+        "BERT.pdf-page-1-chunk-4"
+    ]
+},
+{
+    "question": "How does self-attention help Transformers model relationships between tokens?",
+    "relevant_doc_ids": [
+        "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-2-chunk-5",
+        "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-5-chunk-14",
+        "NIPS-2017-attention-is-all-you-need-Paper.pdf-page-7-chunk-22"
+    ]
+},
+{
+    "question": "How does LoRA reduce the number of trainable parameters during fine-tuning?",
+    "relevant_doc_ids": [
+        "LoRA.pdf-page-1-chunk-1",
+        "LoRA.pdf-page-4-chunk-15"
+    ]
+},
+{
+    "question": "How does Retrieval-Augmented Generation combine retrieval with text generation?",
+    "relevant_doc_ids": [
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-1-chunk-1",
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.pdf-page-5-chunk-22"
+    ]
+},
+{
+    "question": "How does the ReAct framework combine reasoning and actions?",
+    "relevant_doc_ids": [
+        "ReAct.pdf-page-2-chunk-9",
+        "ReAct.pdf-page-3-chunk-13",
+        "ReAct.pdf-page-4-chunk-17"
+    ]
+},
+{
+    "question": "How does Dense Passage Retrieval use encoders to retrieve relevant passages?",
+    "relevant_doc_ids": [
+        "DPR.pdf-page-1-chunk-0",
+        "DPR.pdf-page-2-chunk-9",
+        "DPR.pdf-page-3-chunk-11"
+    ]
+}
+]

@@ -9,13 +9,10 @@ class Reranker:
     ):
 
         print(
-            f"Loading reranker model: "
-            f"{model_name}"
+            f"Loading reranker model: {model_name}"
         )
 
-        self.model = CrossEncoder(
-            model_name
-        )
+        self.model = CrossEncoder(model_name)
 
     def rerank(
         self,
@@ -25,53 +22,46 @@ class Reranker:
     ):
 
         if not results:
-
             return []
 
-        pairs = []
+        # Create query-document pairs for the Cross-Encoder.
+        pairs = [
+            (query, result["document"])
+            for result in results
+        ]
 
-        for result in results:
-
-            pairs.append(
-                (
-                    query,
-                    result["document"]
-                )
-            )
-
-        scores = self.model.predict(
-            pairs
-        )
+        # Calculate relevance scores.
+        scores = self.model.predict(pairs)
 
         reranked_results = []
 
         for i, result in enumerate(results):
 
             reranked_results.append({
-
                 "id": result["id"],
 
-                "document": result[
-                    "document"
-                ],
+                "document": result["document"],
 
-                "metadata": result[
-                    "metadata"
-                ],
+                "metadata": result["metadata"],
 
+                # Preserve the RRF score.
                 "rrf_score": result.get(
                     "rrf_score",
-                    0
+                    0.0
                 ),
 
-                "reranker_score": float(
-                    scores[i]
-                )
+                # Preserve the MMR score.
+                "mmr_score": result.get(
+                    "mmr_score"
+                ),
+
+                # Add the Cross-Encoder relevance score.
+                "reranker_score": float(scores[i])
             })
 
+        # Sort by Cross-Encoder relevance, highest first.
         reranked_results.sort(
-            key=lambda result:
-                result["reranker_score"],
+            key=lambda result: result["reranker_score"],
             reverse=True
         )
 
